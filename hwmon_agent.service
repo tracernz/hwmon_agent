@@ -1,0 +1,10 @@
+[Unit]
+Description=hwmon agent for snmpd
+Wants=snmpd.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/hwmon_agent.py
+
+[Install]
+WantedBy=multi-user.target
